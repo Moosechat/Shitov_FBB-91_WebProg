@@ -86,14 +86,14 @@ main{
 .card a:hover{
     color: blueviolet;
 }
-.card image{
+.card .image{
     height: 350px;
 }
-.card image img{
+.card .image img{
     max-width: 200px;
     max-height: 300px;
 }
-.card image img:hover{
+.card .image img:hover{
     max-width: 250px;
     max-height: 350px;
 }
