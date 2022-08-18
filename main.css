@@ -13,14 +13,17 @@ header .info{
     font-size: 14px;
     }
 header h1{
-    background-color: greenyellow;
+    background-color: rosybrown;
+    border-bottom: 2px solid black;
     color: black;
-    margin: 20px;
+    margin: 0px;
     padding: 20px 0px 20px 15px;
 }
 nav{
-    background-color: greenyellow;
-    padding: 10px;
+    background-color: rosybrown;
+    border-bottom: 2px solid black;
+    padding: 0px;
+
 }
 nav .searchbox{
     display: inline-block;
@@ -44,6 +47,8 @@ nav ul{
 }
 nav ul li{
     list-style-type: none;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -59,24 +64,28 @@ nav ul li a{
     transition: all 400ms;
 }
 nav ul li a:hover{
-    color: blue;
+    background-color: #ff4040;
+    color: white;
     }
 main{
-    background-color: rgb(136, 233, 157);
+    background-color: rosybrown;
     color: black;
     padding: 30px 0px;
 }
 .card{
+    vertical-align: top;
     display: inline-block;
     width: 300px;
     height: 400px;
     text-align: center;
     padding: 7px;
     border-radius: 7px;
-    transition: 300px;
+    transition: 400px;
     }
 .card:hover{
-    box-shadow: 0 0 7px rgb(97, 192, 140);
+    box-shadow: 0 0 7px #ff4040;
+    background-color: #ff4040;
+    transition: all 400ms;
 }
 .card a{
     text-decoration: none;
@@ -84,21 +93,43 @@ main{
     transition: 300px;
 }
 .card a:hover{
-    color: blueviolet;
+    color: white;
 }
 .card .image{
-    height: 350px;
+    height: 250px;
 }
 .card .image img{
     max-width: 200px;
-    max-height: 300px;
+    max-height: 200px;
 }
 .card .image img:hover{
+    transition: all 400ms;
     max-width: 250px;
-    max-height: 350px;
+    max-height: 250px;
 }
 footer{
     padding: 25px;
     color: aliceblue;
     background-color: black;
+}
+.buyit{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    margin: 0px 0px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #ff4040 0%, rosybrown 51%, #ff4040 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+.buyit:hover{
+    background-position: right center;
+}
+.amount{
+    width: 30px;
 }
