@@ -10,6 +10,11 @@
         console.log("Всем привет!!!");
         console.error("Ошибка...");
         console.warn("Сообщение предупреждение");
+        
+        function notReadyAlert() {
+            alert( 'Part is not ready yet! \n Раздел не готов!' );
+            return false;
+        }
     </script>
 </head>
 <body>
@@ -19,10 +24,10 @@
     </header>
     <nav class="main-menu">
         <ul>
-            <li><a href="promotions.html">Акции</a></li>
+            <li><a href="promotions.html" onclick="return notReadyAlert()" >Акции</a></li>
             <li><a href="index.html">Товары</a></li>
-            <li><a href="delivery.html">Доставка</a></li>
-            <li><a href="contacts.html">Связаться с нами</a></li>
+            <li><a href="delivery.html" onclick="return notReadyAlert()" >Доставка</a></li>
+            <li><a href="contacts.html" onclick="return notReadyAlert()" >Связаться с нами</a></li>
         </ul>
         <div class="searchbox">
             <input type="search" placeholder="Поиск">
