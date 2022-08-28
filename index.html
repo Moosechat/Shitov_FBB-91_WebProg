@@ -15,9 +15,45 @@
             alert( 'Part is not ready yet! \n Раздел не готов!' );
             return false;
         }
+
+        function search() {
+            let name = document.getElementById('search').value;
+            let productNumber = null;
+            if (name == 'НСК') {
+                productNumber = 0;
+            } 
+            else if (name == 'Президент') {
+                productNumber = 1;
+            } 
+            else if (name == 'Судья') {
+                productNumber = 2;
+            }
+            else {
+                alert("Товар не найден!!!");
+            }
+            let cards = document.getElementsByClassName('card');
+            let card = cards[productNumber];
+            card.style.border = '1px dashed red';
+            card.style.backgroundColor = 'yellow';
+            
+            setTimeout(function() {
+            card.style.border = 'none';
+            card.style.backgroundColor = '';
+        }, 2000);
+        }
+
+        function loaded() {
+            let searchbox = document.getElementById('search');
+            searchbox.addEventListener('keydown', function (key){
+                if (key.key == 'Enter')
+                search();
+            });
+        }
+
+        
     </script>
 </head>
-<body>
+<body onload="loaded()">
     <header>
         <div class="info">Email: Shitov.a.v@mail.ru</div>
         <h1>Маркет. Удостоверения служащих РФ.</h1>
@@ -30,8 +66,8 @@
             <li><a href="contacts.html" onclick="return notReadyAlert()" >Связаться с нами</a></li>
         </ul>
         <div class="searchbox">
-            <input type="search" placeholder="Поиск">
-            <button>&#x1F50E;</button>
+            <input type="search" placeholder="Поиск" id="search">
+            <button onclick="search()">&#x1F50E;</button>
         </div>
     </nav>
     <main>
