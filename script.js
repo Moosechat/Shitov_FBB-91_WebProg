@@ -1,6 +1,3 @@
-console.log("Всем привет!!!");
-console.error("Ошибка...");
-console.warn("Сообщение предупреждение");
 
 function notReadyAlert() {
     alert( 'Part is not ready yet! \n Раздел не готов!' );
